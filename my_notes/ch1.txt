@@ -1,0 +1,32 @@
+Parentheses: ()
+Braces: {}
+Brackets: []
+
+Tilde expansion: ~
+Brace expansion: {..}
+Parameter expansion: ${..}
+Command expansion: $(..)
+Airthmetic expansion: $((..))
+
+-------------------------------------
+Brace expansion
+1. command: echo {1..10}
+   result : 1 2 3 4 5 6 7 8 9 10
+2. command: head -n 1 {dir1,dir2,dir3}/lorem.txt
+   result : will show the 1st line for the file lorem.txt in each directory
+
+-------------------------------------
+Parameter expansion
+1. command: greeting="hello there"
+            echo ${greeting}
+   result : hello there
+2. command: echo ${greeting/there/to you}
+   result : hello to you
+
+-------------------------------------
+Command expansion
+1. command: echo $(ls)
+   result : print out the list files
+
+   command: echo ls
+   result : ls
